@@ -23,7 +23,7 @@ app.get('/about', (req, res) => {
     res.sendFile('public/about.html', { root: __dirname });
 });
 
-// API endpoint to get user inputs
+
 app.get('/user-inputs', async (req, res) => {
     console.log('Getting User Inputs');
 
@@ -38,7 +38,7 @@ app.get('/user-inputs', async (req, res) => {
     }
 });
 
-// API endpoint to add user input
+
 app.post('/user-input', async (req, res) => {
     console.log('Adding User Input');
 
