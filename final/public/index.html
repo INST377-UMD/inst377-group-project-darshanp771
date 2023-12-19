@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index_final.html">Home</a>
+      <a href="about.html">About</a>
+     
+    </nav>
+  </header>
+
+  <h1>Weather App</h1>
+  <h2>How to Use</h2>
+  <p>1. Enter the city or zip code for which you want to check the weather.</p>
+  <p>2. Click the "Get Weather" button to fetch and display the current weather information.</p>
+  <div class="input-container">
+    <label for="city" style ="font-weight:bold;">Enter City:</label>
+    <input type="text" id="city" placeholder="City">
+    <label for="zip" style="font-weight: bold;">Zip Code:</label>
+
+    <input type="text" id="zip" placeholder="Zip Code">
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <div class="info-container">
+    <div id="weather-info"></div>
+    <div id="error-message"></div>
+  </div>
+
+  <div id="map" style="height: 400px;"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="App.js"></script>  
+</body>
+</html>
